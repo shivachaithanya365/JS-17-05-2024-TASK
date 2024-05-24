@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String problems</title>
+    <style>
+        pre {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-left: 30%;
+        }
+
+        h5 {
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<pre>
+    <h4>Finding the length of an string without a.length</h4>
+    <h5>for loop</h5>
+        var a = "shiva";
+        var length = 0;
+        for (i = 0; a[i] !== undefined; i++) {
+            length++;
+        }
+        console.log(length);            // Outputs: 5
+
+        <h5>for in</h5>
+        for (length in a) {
+        }
+        console.log(+length + 1);       // Outputs: 5
+
+
+        let lengthofarray = 0;
+        for (index in a) {
+            lengthofstring++;
+        }
+        console.log(lengthofstring);     // Outputs: 5
+
+        <h5>for of</h5>
+        var length = 0;
+        for (i of a) {
+            length++;
+        }
+        console.log(length);           // Outputs: 5
+
+        <h4>Finding the length of a string </h4>
+        
+        var a = "shiva";
+        console.log(a.length);         //5
+
+        <h5>for loop-index</h5>
+        for (i = 0; i < a.length; i++) {
+            console.log(i);
+        }                              //0,1,2,3,4
+
+        <h5>for loop-char</h5>
+        for (i = 0; i < a.length; i++) {
+            console.log(a[i]);
+        }                              //s,h,i,v,a
+
+        <h5>for in-index</h5>
+        for (refname in a) {
+            console.log(refname);      //0,1,2,3,4
+        }
+
+        <h5>for in-char</h5>
+        for (refname in a) {
+            console.log(a[refname]);   //s,h,i,v,a
+        }
+        // for in - index with 1 - position of string
+        for (refname in a) {
+            console.log(+refname + 1);
+        }                              //1,2,3,4,5
+
+        <h5>for of-char</h5>
+        for (refname of a) {
+            console.log(refname);
+        }                              //c,h,a,i,t,a,n,y,a
+
+        <h4>prints string chaithaya without a in it</h4>
+        <h5>for loop</h5>
+        var a = "chaitanya";
+        for (i = 0; i <= 8; i++) {
+            if (a[i] != "a") {
+                console.log(a[i]);
+            }
+        }                               //c,h,i,t,n,y
+
+        <h5>for in</h5>
+        for (refname in a) {
+            if (a[refname] != "a") {
+                console.log(a[refname]);
+            }
+        }                               //c,h,i,t,n,y
+
+        <h5>for of</h5>
+        for (refname of a) {
+            if (refname != "a") {
+                console.log(refname);
+            }
+        }                               //c,h,i,t,n,y
+
+        var a = "chaitanya";
+        for (i of a) var c = 0;
+        if (i == "a") {
+            c++;
+        }
+        console.log(c);                 //1
+        
+</pre>
+
+<body>
+    <script>
+        // Finding the length of an string without a.length
+        //for loop
+        var a = "shiva";
+        var length = 0;
+        for (i = 0; a[i] !== undefined; i++) {
+            length++;
+        }
+        console.log(length); // Outputs: 5
+
+        //for in
+        for (length in a) {
+        }
+        console.log(+length + 1); // Outputs: 5
+
+
+        let lengthofstring = 0;
+        for (index in a) {
+            lengthofstring++;
+        }
+        console.log(lengthofstring); // Outputs: 5
+
+        //for of
+        var length = 0;
+        for (i of a) {
+            length++;
+        }
+        console.log(length); // Outputs: 5
+
+
+        // Finding the length of an string
+
+        var a = "shiva";
+        console.log(a.length); //5
+
+        // for loop - index
+        for (i = 0; i < a.length; i++) {
+            console.log(i);
+        } //0,1,2,3,4
+        // for loop - char
+        for (i = 0; i < a.length; i++) {
+            console.log(a[i]);
+        } //s,h,i,v,a
+        // for in - index
+        for (refname in a) {
+            console.log(refname); //0,1,2,3,4
+        }
+        // for in - char
+        for (refname in a) {
+            console.log(a[refname]); //s,h,i,v,a
+        }
+        // for in - index with 1 - position of string
+        for (refname in a) {
+            console.log(+refname + 1);
+        } //1,2,3,4,5
+
+        // for of - char
+        for (refname of a) {
+            console.log(refname);
+        } //c,h,a,i,t,a,n,y,a
+
+        //prints string chaithaya without a in it
+
+        // for loop
+        var a = "chaitanya";
+        for (i = 0; i <= 8; i++) {
+            if (a[i] != "a") {
+                console.log(a[i]);
+            }
+        } //c,h,i,t,n,y
+
+        // for in
+        for (refname in a) {
+            if (a[refname] != "a") {
+                console.log(a[refname]);
+            }
+        } //c,h,i,t,n,y
+
+        // for of
+        for (refname of a) {
+            if (refname != "a") {
+                console.log(refname);
+            }
+        } //c,h,i,t,n,y
+
+        var a = "chaitanya";
+        for (i of a) var c = 0;
+        if (i == "a") {
+            c++;
+        }
+        console.log(c); //1
+
+    </script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
